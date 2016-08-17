@@ -13,7 +13,7 @@ gem 'spring',        group: :development
 gem 'rename'
 gem 'hirb'
 gem 'bcrypt', '~> 3.1.7'
-gem 'hirb'
+gem 'rails_12factor', group: :production
 group :test, :development do
   gem 'rspec-rails'
   gem 'database_cleaner'
