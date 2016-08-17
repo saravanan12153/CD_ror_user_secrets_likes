@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Users | Secrets </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+    <% if current_user %>
+      <form action='/sessions' method='post'>
+        <input type='hidden' name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type='hidden' name='_method' value='delete'>
+        <button type="submit" class="btn btn-default">Log Out</button>
+      </form>
+    <% end %>
+
+    <% if flash[:errors] %>
+        <% flash[:errors].each do |error| %>
+        <div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <%= error %></div>
+        <% end %>
+    <% end %>
+
+
+
+<%= yield %>
+
+</body>
+</html>
