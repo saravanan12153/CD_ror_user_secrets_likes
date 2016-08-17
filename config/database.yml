@@ -25,8 +25,8 @@ development:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: felisadeang
-  password: Coding2016!!
+  username: ubuntu
+  password:
   <<: *default
   database: new_login_and_reg_development
 
@@ -66,8 +66,8 @@ test:
   pool: 5
   <<: *default
   database: new_login_and_reg_test
-  username: felisadeang
-  password: Coding2016!!
+  username: ubuntu
+  password:
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -94,5 +94,5 @@ production:
   encoding: unicode
   pool: 5
   database: new_login_and_reg_production
-  username: felisadeang
-  password: Coding2016!!
+  username: ubuntu
+  password: 
